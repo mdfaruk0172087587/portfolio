@@ -3,11 +3,15 @@ import React from 'react';
 const Navbar = () => {
     // links
     const Links = <>
-        <li><a>Item 1</a></li>
-        <li><a>Item 3</a></li>
+        <li><a>Home</a></li>
+        <li><a>About</a></li>
+        <li><a>Skills</a></li>
+        <li><a>Projects</a></li>
+        <li><a>Contact</a></li>
+
     </>
     return (
-        <div className="navbar bg-base-100 shadow-sm px-14">
+        <div className="navbar bg-base-100 shadow-sm px-6 md:px-13 lg:px-28">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

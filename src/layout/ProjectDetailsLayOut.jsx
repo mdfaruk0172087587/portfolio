@@ -1,14 +1,9 @@
 import React from 'react';
-import Navbar from '../compnents/Navbar';
-import About from '../compnents/About';
-import Skills from '../compnents/Skills';
-import Projects from '../compnents/Projects';
-import Contact from '../compnents/Contact';
-import Home from '../compnents/Home';
+import { Outlet } from 'react-router';
 import Footer from '../compnents/Footer';
 
-const HomeLayOut = () => {
-    const Links = <>
+const ProjectDetailsLayOut = () => {
+     const Links = <>
         <li><a>Home</a></li>
         <li><a>About</a></li>
         <li><a>Skills</a></li>
@@ -18,9 +13,9 @@ const HomeLayOut = () => {
     </>
     return (
         <div>
-            <header className='sticky top-0 z-50'>
-                <Navbar></Navbar>
-                {/* <div className="navbar bg-base-100 shadow-sm px-28">
+             <header>
+                {/* <Navbar></Navbar> */}
+                <div className="navbar bg-base-100 shadow-sm px-28">
                     <div className="navbar-start">
                         <div className="dropdown">
                             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -42,36 +37,16 @@ const HomeLayOut = () => {
                     <div className="navbar-end">
                         <a className="btn">Button</a>
                     </div>
-                </div> */}
+                </div>
             </header>
-            <main className='max-w-[90%] mx-auto space-y-5 my-5'>
-                {/* home */}
-                <section>
-                    <Home></Home>
-                </section>
-                {/* about */}
-                <section>
-                    <About></About>
-                </section>
-                {/* skills */}
-                <section>
-                    <Skills></Skills>
-                </section>
-                {/* project */}
-                <section>
-                    <Projects></Projects>
-                </section>
-                {/* contact */}
-                <section>
-                    <Contact></Contact>
-                </section>
+            <main className='max-w-[81%] mx-auto'>
+                <Outlet></Outlet>
             </main>
             <footer>
                 <Footer></Footer>
             </footer>
-
         </div>
     );
 };
 
-export default HomeLayOut;
+export default ProjectDetailsLayOut;

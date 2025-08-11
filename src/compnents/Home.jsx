@@ -1,31 +1,76 @@
 import React from 'react';
+import image from '../assets/profile.jpg';
+import { FaDownload, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 
 const Home = () => {
-    return (
-        <div className='flex justify-center items-center flex-col lg:flex-row-reverse'>
-             {/* image */}
-           <div className='mb-8'>
-            <img className='h-[300px] w-[300px] ' src="https://i.ibb.co.com/WNFjN16K/profile.jpg" alt="" />
-            
-           </div>
-           {/* text div */}
-           <div className='w-1/2'>
-            <h3 className='text-lg mb-3'>Hello, I am</h3>
-            <h1 className='font-bold text-xl mb-3'>Omar Faruk</h1>
-            <h5 className='text-lg font-medium mb-3'>Frontend Developer</h5>
-            <p className='text-lg'>I make beautiful website</p>
-            {/* links */}
-            <div className='flex gap-3'>
-                <li>li 1</li>
-                <li>li 2</li>
-                <li>li 3</li>
-            </div>
-            <button className='btn mt-3'>Resume</button>
-           </div>
-          
+  return (
+    <section
+      className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-12 px-4 md:px-8 lg:px-16"
+    >
+      {/* Left Side - Text */}
+      <div className="flex-1 text-center md:text-left">
+        <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
+          Hi, I’m <span className="text-blue-600">Omar Faruk</span>
+        </h1>
+        <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 mt-3">
+          Frontend / MERN Developer
+        </p>
+        <p className="mt-5 max-w-lg mx-auto md:mx-0 text-gray-700 dark:text-gray-400">
+          আমি একজন উদ্যমী ওয়েব ডেভেলপার, যার লক্ষ্য হলো সুন্দর, দ্রুত এবং ব্যবহারবান্ধব ওয়েব অ্যাপ তৈরি করা।
+          নতুন প্রযুক্তি শিখতে ও সমস্যা সমাধান করতে আমি ভালোবাসি।
+        </p>
+
+        {/* Social Icons */}
+        <div className="mt-6 flex justify-center md:justify-start gap-6 text-blue-600">
+          <a
+            href="https://www.facebook.com/faruk5872a"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Facebook"
+            className="hover:text-blue-800 transition"
+          >
+            <FaFacebookF size={24} />
+          </a>
+          <a
+            href="https://www.linkedin.com/in/omar-faruk8/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            className="hover:text-blue-800 transition"
+          >
+            <FaLinkedinIn size={24} />
+          </a>
+          <a
+            href="https://github.com/mdfaruk0172087587"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            className="hover:text-blue-800 transition"
+          >
+            <FaGithub size={24} />
+          </a>
         </div>
 
-    );
+        {/* Buttons */}
+        <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
+          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-300">
+            <FaDownload /> Download Resume
+          </button>
+        </div>
+      </div>
+
+      {/* Right Side - Image */}
+      <div className="flex-1 flex justify-center md:justify-end">
+        <div className="w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-xl border-4 border-blue-600 hover:scale-105 transition-transform duration-300">
+          <img
+            src={image}
+            alt="profile"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </section>
+  );
 };
 
 export default Home;
