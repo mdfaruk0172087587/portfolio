@@ -59,11 +59,11 @@ const Contact = () => {
             <p className="text-center mb-8 text-gray-600 max-w-xl mx-auto">
                 Have a project in mind or just want to say hello? I'd love to hear from you. Let's create something amazing together!
             </p>
-            <div className="max-w-[90%] mx-auto p-6 mt-5 bg-white rounded-lg shadow-md grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="max-w-[90%] mx-auto mt-5 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Left Side: Form */}
                 <div>
                     <h1 className="text-3xl font-medium mb-6 text-gray-800">Email Me</h1>
-                    <form ref={form} onSubmit={sendEmail} className="space-y-4" noValidate>
+                    <form ref={form} onSubmit={sendEmail} className="space-y-2" noValidate>
                         <div>
                             <label className="block mb-2 font-medium text-gray-700">Name</label>
                             <input
@@ -140,7 +140,7 @@ const Contact = () => {
                     <h1 className="text-3xl font-medium mb-6 text-gray-800">Contact Information</h1>
                     <div className="flex items-center mb-6">
                         <MdEmail className="text-2xl text-blue-600 mr-4" />
-                        <span className="text-lg text-gray-700">mdfaruk01720875872@gmail.com</span>
+                        <span className="lg:text-lg text-base text-gray-700">mdfaruk01720875872@gmail.com</span>
                     </div>
                     <div className="flex items-center mb-6">
                         <MdPhone className="text-2xl text-green-600 mr-4" />
@@ -166,6 +166,9 @@ const Contact = () => {
                 {/* Toast Notifications */}
                 <ToastContainer />
             </div>
+             <div className=" max-w-[90%] mx-auto border-t border-gray-700 py-4 text-gray-600 text-sm text-center">
+                    © {new Date().getFullYear()} Omar Faruk. All rights reserved.
+                </div>
         </div>
     );
 };

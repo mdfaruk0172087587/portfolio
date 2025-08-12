@@ -32,6 +32,7 @@ const HomeLayOut = () => {
                 <section id='contact'>
                     <Contact></Contact>
                 </section>
+
             </main>
         </div>
     );
