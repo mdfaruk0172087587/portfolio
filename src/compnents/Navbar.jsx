@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { FaDownload } from 'react-icons/fa';
 import logoP from '../assets/logoP.png';
 import '../navbar.css';
-
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
 

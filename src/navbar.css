@@ -22,5 +22,14 @@
   font-weight: 600;
   transition: color 0.3s ease, border-bottom 0.3s ease;
 }
+/* ডার্ক মোডে active না থাকা লিংকের কালার পরিবর্তন */
+.dark .menu li a {
+  color: blue;  /* হালকা গ্রে (Tailwind’s gray-400 এর মত) */
+  transition: color 0.3s ease;
+}
 
+/* হোভার করলে হালকা সাদা বা অন্য কালার দিতে পারো */
+.dark .menu li a:hover {
+  color: blue; /* Tailwind’s gray-200 */
+}
 

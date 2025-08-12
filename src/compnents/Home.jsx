@@ -1,6 +1,7 @@
 import React from 'react';
 import image from '../assets/profile.jpg';
 import { FaDownload, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
+import { Typewriter } from 'react-simple-typewriter';
 const Home = () => {
   return (
     <section
@@ -12,7 +13,17 @@ const Home = () => {
           Hi, I’m <span className="text-blue-600">Omar Faruk</span>
         </h1>
         <p className="text-lg lg:text-xl text-gray-600 dark:text-gray-300 mt-3">
-          Frontend / MERN Developer
+          Frontend / <span className=' text-blue-600'>
+                        <Typewriter
+                            words={['MERN Stack Developer']}
+                            loop={false}
+                            cursor
+                            cursorStyle="|"
+                            typeSpeed={70}
+                            deleteSpeed={50}
+                            delaySpeed={2000}
+                        />
+                    </span>
         </p>
         <p className="mt-5 max-w-lg mx-auto md:mx-0 text-gray-700 dark:text-gray-400">
           I am a motivated web developer with a goal to create beautiful, fast, and user-friendly web applications. I love learning new technologies and solving problems.
