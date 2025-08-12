@@ -1,11 +1,10 @@
 import React from 'react';
 import image from '../assets/profile.jpg';
 import { FaDownload, FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
-
 const Home = () => {
   return (
     <section
-      className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10 py-12 px-4 md:px-8 lg:px-16"
+      className="container mx-auto flex flex-col-reverse md:flex-row items-center justify-between gap-10  px-4 md:px-8 lg:px-16"
     >
       {/* Left Side - Text */}
       <div className="flex-1 text-center md:text-left">
@@ -16,10 +15,8 @@ const Home = () => {
           Frontend / MERN Developer
         </p>
         <p className="mt-5 max-w-lg mx-auto md:mx-0 text-gray-700 dark:text-gray-400">
-          আমি একজন উদ্যমী ওয়েব ডেভেলপার, যার লক্ষ্য হলো সুন্দর, দ্রুত এবং ব্যবহারবান্ধব ওয়েব অ্যাপ তৈরি করা।
-          নতুন প্রযুক্তি শিখতে ও সমস্যা সমাধান করতে আমি ভালোবাসি।
+          I am a motivated web developer with a goal to create beautiful, fast, and user-friendly web applications. I love learning new technologies and solving problems.
         </p>
-
         {/* Social Icons */}
         <div className="mt-6 flex justify-center md:justify-start gap-6 text-blue-600">
           <a
@@ -50,7 +47,6 @@ const Home = () => {
             <FaGithub size={24} />
           </a>
         </div>
-
         {/* Buttons */}
         <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
           <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg shadow-md transition duration-300">
@@ -58,7 +54,6 @@ const Home = () => {
           </button>
         </div>
       </div>
-
       {/* Right Side - Image */}
       <div className="flex-1 flex justify-center md:justify-end">
         <div className="w-48 h-48 lg:w-64 lg:h-64 rounded-full overflow-hidden shadow-xl border-4 border-blue-600 hover:scale-105 transition-transform duration-300">

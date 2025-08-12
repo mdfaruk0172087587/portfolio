@@ -1,33 +1,24 @@
 import React from 'react';
-
+import aboutLottie from '../assets/aboutLottie.json';
+import Lottie from 'lottie-react';
 const About = () => {
   return (
-    <section className=" ">
-      <h1 className="text-3xl font-bold text-center mb-8 text-gray-800 dark:text-white">About Me</h1>
-      <div className="max-w-[89%] mx-auto text-gray-700 dark:text-gray-300 leading-relaxed space-y-6 text-justify">
-
-        {/* প্রোগ্রামিং জার্নি */}
-        <p>
-          আমি একজন উদ্যমী ও বিস্তারিতমুখী <span className="font-semibold">Frontend Developer</span>, যিনি <span className="font-semibold">React.js</span> এবং <span className="font-semibold">Tailwind CSS</span> দিয়ে দ্রুত এবং ব্যবহারবান্ধব ওয়েব অ্যাপ্লিকেশন তৈরিতে পারদর্শী। প্রোগ্রামিং জার্নি শুরু করেছিলাম উৎসাহী মনের সাথে ছোট ছোট প্রোজেক্ট দিয়ে, ধীরে ধীরে জটিল ওয়েবসাইট ও অ্যাপ্লিকেশন বানাতে শিখেছি।
-        </p>
-
-        {/* কাজের ধরণ */}
-        <p>
-          আমি নতুন আইডিয়া বাস্তবায়ন, পারফরম্যান্স অপটিমাইজেশন, এবং সব ডিভাইসে সুন্দর ইউজার এক্সপেরিয়েন্স নিশ্চিত করতে ভালোবাসি। আমার কাজের ধরণ হচ্ছে ক্লিন কোড লেখা, রেস্পনসিভ ডিজাইন বানানো, এবং টিমওয়ার্কের মাধ্যমে সমস্যা সমাধান করা।
-        </p>
-
-        {/* শখ বা আগ্রহ */}
-        <p>
-          প্রোগ্রামিংয়ের বাইরে আমি খেলাধুলায় ভালোবাসি, বিশেষ করে ক্রিকেট খেলা এবং সময় পেলেই ছবি আঁকতেও আগ্রহী। এসব শখ আমার চিন্তার পরিধি বাড়ায় এবং কাজের স্ট্রেস কমাতে সাহায্য করে।
-        </p>
-
-        {/* ব্যক্তিত্ব ফুটিয়ে তোলা */}
-        <p>
-          আমি একজন ধৈর্যশীল, ক্রিয়েটিভ এবং নতুন কিছু শেখার প্রতি সদা উন্মুক্ত ব্যক্তি। চ্যালেঞ্জ মোকাবিলায় আমি ঝুঁকি নিতে ভালোবাসি এবং যে কোনও সমস্যার সমাধান খুঁজে বের করতে উৎসাহী।
-        </p>
-
+    <div className='mt-10'>
+      {/* mobile column, lg row */}
+      <div className="flex flex-col-reverse lg:flex-row lg:justify-center lg:items-center px-5 md:px-8 lg:px-15 gap-8">
+        {/* Text Section */}
+        <div className="flex-1 text-gray-300">
+          <h1 className="text-3xl font-medium text-center text-gray-800 dark:text-white mb-6">About Me</h1>
+          <div className="text-gray-700 dark:text-gray-300 leading-relaxed space-y-6 text-justify">
+           <p> I am a motivated and detail-oriented <span className="font-semibold">Frontend Developer</span>, skilled in creating fast and user-friendly web applications using <span className="font-semibold">React.js</span> and <span className="font-semibold">Tailwind CSS</span>. I started my programming journey enthusiastically with small projects and gradually learned to build complex websites and applications. </p> <p> I enjoy implementing new ideas, optimizing performance, and ensuring a smooth user experience across all devices. My work style involves writing clean code, creating responsive designs, and solving problems through teamwork. </p> <p> Outside of programming, I love sports, especially playing cricket, and I am also interested in painting whenever I get time. These hobbies broaden my thinking and help reduce work-related stress. </p> <p> I am a patient, creative, and always open to learning new things. I enjoy taking risks when facing challenges and am passionate about finding solutions to any problem. </p>
+          </div>
+        </div>
+        {/* Lottie Animation */}
+        <div className="flex-1 w-full flex justify-center items-center">
+          <Lottie animationData={aboutLottie} loop={true} style={{ width: '100%', height: '100%' }} />
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 

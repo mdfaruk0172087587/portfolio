@@ -6,6 +6,7 @@
 
 html{
   font-family: "Work Sans", sans-serif;
+   scroll-behavior: smooth;
 }
 body{
   background-color: #F3F7FF;

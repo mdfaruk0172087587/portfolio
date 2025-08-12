@@ -1,0 +1,26 @@
+.animated-gradient {
+  background: linear-gradient(270deg, #F3F7FF, #c7d2fe, #93c5fd);
+  background-size: 400% 400%;
+  animation: gradientMove 4s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+.active-link {
+  color: #1e40af; 
+  border-bottom: 2px solid #1e40af;
+  padding-bottom: 4px;
+  font-weight: 600;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+

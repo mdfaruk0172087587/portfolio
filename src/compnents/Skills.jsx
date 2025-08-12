@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import { motion } from 'framer-motion';
-
 const skillsData = [
     {
         name: "React",
@@ -28,11 +27,13 @@ const skillsData = [
         img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
     }
 ];
-
 const Skills = () => {
     return (
-        <div className="py-10">
-            <h1 className="text-2xl font-bold text-center mb-8 text-gray-800">My Skills</h1>
+        <div className="py-5">
+            <h1 className="text-2xl font-medium text-center text-gray-800">My Skills</h1>
+             <p className="text-center mb-8 text-gray-600 max-w-xl mx-auto">
+                Here are the technologies and tools I work with to create amazing digital experiences. atar bangla ki
+            </p>
             <div className="max-w-[92%] mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 px-4">
                 {skillsData.map((skill, index) => (
                     <motion.div

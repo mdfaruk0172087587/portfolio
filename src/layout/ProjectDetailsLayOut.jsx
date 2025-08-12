@@ -1,50 +1,21 @@
 import React from 'react';
 import { Outlet } from 'react-router';
-import Footer from '../compnents/Footer';
-
+import { FaArrowLeft } from 'react-icons/fa';
+import '../navbar.css'
+import { HashLink } from 'react-router-hash-link';
 const ProjectDetailsLayOut = () => {
-     const Links = <>
-        <li><a>Home</a></li>
-        <li><a>About</a></li>
-        <li><a>Skills</a></li>
-        <li><a>Projects</a></li>
-        <li><a>Contact</a></li>
-
-    </>
     return (
         <div>
-             <header>
-                {/* <Navbar></Navbar> */}
-                <div className="navbar bg-base-100 shadow-sm px-28">
-                    <div className="navbar-start">
-                        <div className="dropdown">
-                            <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                                <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
-                            </div>
-                            <ul
-                                tabIndex={0}
-                                className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-                                {Links}
-                            </ul>
-                        </div>
-                        <a className="btn btn-ghost text-xl">logo</a>
-                    </div>
-                    <div className="navbar-center hidden lg:flex">
-                        <ul className="menu menu-horizontal px-1">
-                            {Links}
-                        </ul>
-                    </div>
-                    <div className="navbar-end">
-                        <a className="btn">Button</a>
-                    </div>
-                </div>
+            <header className='sticky top-0 z-50'>
+                <nav className="navbar animated-gradient shadow-sm px-6 md:px-13 lg:px-31">
+                    <HashLink smooth to="/#projects" className="flex items-center gap-2 text-sm md:text-base text-gray-700 hover:text-primary transition-colors duration-200 font-medium">
+                        <FaArrowLeft className="text-lg" /> Back to Projects
+                    </HashLink>
+                </nav>
             </header>
-            <main className='max-w-[81%] mx-auto'>
+            <main className=''>
                 <Outlet></Outlet>
             </main>
-            <footer>
-                <Footer></Footer>
-            </footer>
         </div>
     );
 };

@@ -1,16 +1,21 @@
 import React from 'react';
-import devProject from '../assets/dev-forum.PNG'
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import { FiExternalLink, FiGithub } from "react-icons/fi";
+import { Autoplay } from "swiper/modules";
 
+const images = [
+    "https://i.ibb.co.com/v6bWLjyS/devforum7.png",
+    "https://i.ibb.co.com/zH82r4Js/devslider3.png",
+    "https://i.ibb.co.com/4D8NW9B/dev2.png",
+    "https://i.ibb.co.com/4ZSBtkSG/dev3.png",
+];
 const techLogos = {
     React: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
-    "Node.js":
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
-    Express:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg",
-    MongoDB:
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
-    "Tailwind CSS":
-        "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg",
+    "Node.js": "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+    Express: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg",
+    MongoDB: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+    "Tailwind CSS": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Tailwind_CSS_Logo.svg",
 };
 
 const DevForumProject = () => {
@@ -18,95 +23,94 @@ const DevForumProject = () => {
         name: "DevForum - A Modern Discussion Platform",
         mainTech: ["React", "Node.js", "Express", "MongoDB", "Tailwind CSS"],
         description:
-            "একটি পূর্ণাঙ্গ কোর্স ম্যানেজমেন্ট সিস্টেম যেখানে ইউজাররা কোর্স অ্যাড, এডিট ও ডিলিট করতে পারেন এবং এনরোলমেন্ট ফিচার আছে।",
+            "This project is an online forum for programmers and developers where they can ask questions, discuss topics, and share their experiences. It serves as a community platform for developers.",
         liveLink: "https://magnificent-kulfi-510251.netlify.app/",
         githubClient: "https://github.com/mdfaruk0172087587/devForum",
         challenges:
-            "ইউজার অথেনটিকেশন ও রোল বেজড এক্সেস কন্ট্রোল ইমপ্লিমেন্ট করা, পাশাপাশি কোর্স এনরোলমেন্ট লজিক ম্যানেজ করা।",
+            "Secure login, accurate tagging, real-time comments and notifications, spam control, and performance optimization were the main challenges.",
         futurePlans:
-            "অ্যাডমিন প্যানেল উন্নয়ন, পেমেন্ট গেটওয়ে ইন্টিগ্রেশন এবং রিয়েলটাইম নোটিফিকেশন সিস্টেম যোগ করা।",
+            "There are plans to add real-time messaging, advanced search, enhanced user management, a mobile app, and AI-based spam control.",
     };
 
     return (
-        <div
-            className="my-5 " >
-            <h1 className="text-2xl font-bold text-center mb-8 text-gray-800">Dev Forum Project Details</h1>
-            <div className="flex flex-col md:flex-row gap-10 items-stretch">
-                {/* Left side - Image */}
-                <div className="md:w-1/2 flex justify-center items-center">
-                    <img
-                        src={devProject}
-                        alt={project.name}
-                        className="rounded-lg shadow-md object-cover w-full h-full"
-                        style={{ maxHeight: "600px", minHeight: "350px" }}
-                    />
-                </div>
+         <div className="my-5">
+            {/* Carousel */}
+            <div className="mb-6">
+                <Swiper
+                    modules={[Autoplay]}
+                    spaceBetween={10}
+                    slidesPerView={1}
+                    pagination={{ clickable: true }}
+                    loop={true}
+                    autoplay={{ delay: 2000, disableOnInteraction: false }}
+                >
+                    {images.map((img, idx) => (
+                        <SwiperSlide key={idx}>
+                            <img
+                                src={img}
+                                alt={`Slide ${idx + 1}`}
+                                className=" shadow-md object-cover w-full"
+                                style={{ maxHeight: "400px", minHeight: "350px" }}
+                            />
+                        </SwiperSlide>
+                    ))}
+                </Swiper>
+            </div>
 
-                {/* Right side - Content */}
-                <div className="md:w-1/2 flex flex-col justify-start">
-                    <h1 className="text-4xl font-bold mb-6 text-gray-800">{project.name}</h1>
-
+           <div className='max-w-[81%] mx-auto'>
+             {/* Description and challenges/future plans in two columns */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
+                <div>
+                    <h1 className="text-xl font-medium mb-6 text-gray-800">{project.name}</h1>
                     <p className="mb-6 text-gray-700">{project.description}</p>
 
-                    {/* Three features */}
-                    <div className="space-y-6 mb-6">
-                        <div>
-                            <h2 className="text-2xl font-semibold mb-2 text-gray-700">
-                                ডেভেলপমেন্টে যে চ্যালেঞ্জ ছিল
-                            </h2>
-                            <p className="text-gray-700">{project.challenges}</p>
-                        </div>
+                    <h2 className="text-lg font-semibold mb-2 text-gray-800">Challenges faced</h2>
+                    <p className="text-gray-700">{project.challenges}</p>
+                </div>
 
-                        <div>
-                            <h2 className="text-2xl font-semibold mb-2 text-gray-700">
-                                ভবিষ্যতে উন্নয়নের পরিকল্পনা
-                            </h2>
-                            <p className="text-gray-700">{project.futurePlans}</p>
-                        </div>
+                <div>
+                    <h2 className="text-lg font-semibold mb-2 text-gray-800">Future plans</h2>
+                    <p className="text-gray-700 mb-6">{project.futurePlans}</p>
 
-                        <div>
-                            <h2 className="text-2xl font-semibold mb-2 text-gray-700">
-                                মেইন টেকনোলজি স্ট্যাক
-                            </h2>
-                            <div className="flex flex-wrap gap-4">
-                                {project.mainTech.map((tech) => (
-                                    <div
-                                        key={tech}
-                                        className="flex flex-col items-center w-20 bg-white rounded-lg shadow p-2"
-                                    >
-                                        <img
-                                            src={techLogos[tech]}
-                                            alt={tech}
-                                            className="w-10 h-10 object-contain mb-1"
-                                        />
-                                        <span className="text-gray-700 text-sm text-center">{tech}</span>
-                                    </div>
-                                ))}
+                    <h2 className="text-lg font-semibold mb-2 text-gray-800">Main Technology Stack</h2>
+                    <div className="flex flex-wrap gap-4">
+                        {project.mainTech.map((tech) => (
+                            <div
+                                key={tech}
+                                className="flex flex-col items-center w-20 bg-white rounded-lg shadow p-2"
+                            >
+                                <img
+                                    src={techLogos[tech]}
+                                    alt={tech}
+                                    className="w-10 h-10 object-contain mb-1"
+                                />
+                                <span className="text-gray-700 text-sm text-center">{tech}</span>
                             </div>
-                        </div>
-                    </div>
-
-                    {/* Buttons */}
-                    <div className="flex flex-col sm:flex-row gap-4">
-                        <a
-                            href={project.liveLink}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-blue-600 text-white px-6 py-3 rounded hover:bg-blue-700 transition text-center"
-                        >
-                            লাইভ লিঙ্ক দেখুন
-                        </a>
-                        <a
-                            href={project.githubClient}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="bg-gray-800 text-white px-6 py-3 rounded hover:bg-gray-900 transition text-center"
-                        >
-                            GitHub (Client) কোড
-                        </a>
+                        ))}
                     </div>
                 </div>
             </div>
+
+            {/* Buttons with react icons */}
+            <div className="md:w-1/2 mx-auto flex flex-col sm:flex-row gap-4 mt-8">
+                <a
+                    href={project.liveLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-blue-600 flex items-center justify-center gap-2 text-white px-6 py-3 rounded hover:bg-blue-700 transition"
+                >
+                    View Live Link <FiExternalLink size={20} />
+                </a>
+                <a
+                    href={project.githubClient}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 flex items-center justify-center gap-2 text-white px-6 py-3 rounded hover:bg-gray-900 transition"
+                >
+                    GitHub (Client) Code <FiGithub size={20} />
+                </a>
+            </div>
+           </div>
         </div>
     );
 };
