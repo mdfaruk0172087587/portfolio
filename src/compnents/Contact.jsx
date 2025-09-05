@@ -55,8 +55,8 @@ const Contact = () => {
     };
     return (
         <div className="mt-10">
-            <h1 className="text-2xl font-medium text-center text-gray-800">Contact Me</h1>
-            <p className="text-center mb-8 text-gray-600 max-w-xl mx-auto">
+            <h1 className="text-2xl font-medium text-center text-black mb-4">Contact Me</h1>
+            <p className="text-center mb-8 text-black max-w-xl mx-auto">
                 Have a project in mind or just want to say hello? I'd love to hear from you. Let's create something amazing together!
             </p>
             <div className="max-w-[90%] mx-auto mt-5 grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -102,8 +102,8 @@ const Contact = () => {
                         <button
                             type="submit"
                             disabled={loading}
-                            className={`${loading ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"
-                                } text-white font-semibold px-6 py-3 rounded transition flex items-center justify-center`}
+                            className={`${loading ? "bg-gray-400 cursor-not-allowed" : "text-black border border-blue-600 rounded-lg shadow-md transition duration-300 hover:bg-blue-700"
+                                }  font-semibold px-6 py-3 rounded transition flex items-center justify-center`}
                         >
                             {loading ? (
                                 <>
@@ -152,7 +152,7 @@ const Contact = () => {
                             href="https://wa.me/8801720875872"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-lg text-gray-700 hover:text-green-700 transition"
+                            className="text-lg text-gray-700 hover:text-green-700 transition underline"
                         >
                             +880 1720 875872
                         </a>
@@ -166,7 +166,7 @@ const Contact = () => {
                 {/* Toast Notifications */}
                 <ToastContainer />
             </div>
-             <div className=" max-w-[90%] mx-auto border-t border-gray-700 py-4 text-gray-600 text-sm text-center">
+             <div className=" max-w-[90%] mx-auto border-t text-black py-4 text-sm text-center">
                     © {new Date().getFullYear()} Omar Faruk. All rights reserved.
                 </div>
         </div>

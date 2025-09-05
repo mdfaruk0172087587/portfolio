@@ -11,7 +11,7 @@ const HomeLayOut = () => {
             <header className='sticky top-0 z-50'>
                 <Navbar></Navbar>
             </header>
-            <main className='max-w-[90%] mx-auto space-y-5 my-5'>
+            <main className='max-w-[90%] mx-auto space-y-5 '>
                 {/* home */}
                 <section id='home'>
                     <Home></Home>

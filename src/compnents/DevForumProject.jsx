@@ -33,7 +33,7 @@ const DevForumProject = () => {
     };
 
     return (
-         <div className="my-5">
+         <div className="">
             {/* Carousel */}
             <div className="mb-6">
                 <Swiper
@@ -92,7 +92,7 @@ const DevForumProject = () => {
             </div>
 
             {/* Buttons with react icons */}
-            <div className="md:w-1/2 mx-auto flex flex-col sm:flex-row gap-4 mt-8">
+            <div className="md:w-1/2 mx-auto flex flex-col sm:flex-row gap-4 mt-8 pb-2">
                 <a
                     href={project.liveLink}
                     target="_blank"

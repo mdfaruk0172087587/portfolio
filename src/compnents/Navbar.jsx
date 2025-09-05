@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { FaDownload } from 'react-icons/fa';
-import logoP from '../assets/logoP.png';
+import logoPP from '/logo2.jpg';
 import '../navbar.css';
+import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
 
@@ -94,16 +95,17 @@ const Navbar = () => {
           </ul>
         </div>
         <a href="/#home">
-          <img className="w-12 h-12 rounded-full" src={logoP} alt="" />
+          <img className="w-12 h-12 rounded-full" src={logoPP} alt="" />
         </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">{Links}</ul>
       </div>
       <div className="navbar-end">
-        <button className="flex items-center gap-2 text-sm md:text-base text-gray-700 hover:text-primary transition-colors duration-200 font-medium">
+        <a href="/resume (1).pdf" download="Omar_Faruk_Resume.pdf"  className="inline-flex items-center gap-2 text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-6 py-3 rounded-lg shadow-md transition duration-300">
           <FaDownload /> Download Resume
-        </button>
+        </a>
+        {/* <ThemeToggle></ThemeToggle> */}
       </div>
     </div>
   );
