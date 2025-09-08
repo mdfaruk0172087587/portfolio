@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaDownload } from 'react-icons/fa';
-import logoPP from '/logo2.jpg';
+import logoPP from '/logo3.jpg';
 import '../navbar.css';
 import ThemeToggle from './ThemeToggle';
 const Navbar = () => {
@@ -102,7 +102,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal px-1">{Links}</ul>
       </div>
       <div className="navbar-end">
-        <a href="/resume (1).pdf" download="Omar_Faruk_Resume.pdf"  className="inline-flex items-center gap-2 text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-6 py-3 rounded-lg shadow-md transition duration-300">
+        <a href="/Omar_Faruk_Resume.pdf" download="Omar_Faruk_Resume.pdf"  className="inline-flex items-center gap-2 text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-6 py-3 rounded-lg shadow-md transition duration-300">
           <FaDownload /> Download Resume
         </a>
         {/* <ThemeToggle></ThemeToggle> */}
