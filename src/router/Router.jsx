@@ -6,6 +6,7 @@ import ProjectDetailsLayOut from "../layout/ProjectDetailsLayOut";
 import CourseManagementProject from "../compnents/CourseManagementProject";
 import RoommateFinderProject from "../compnents/RoommateFinderProject";
 import DevForumProject from "../compnents/DevForumProject";
+import AllProject from "../compnents/AllProject";
 
 
 export const router = createBrowserRouter([
@@ -29,6 +30,10 @@ export const router = createBrowserRouter([
       {
         path: 'dev-forum',
         element: <DevForumProject></DevForumProject>
+      },
+      {
+        path: 'allProject',
+        element: <AllProject></AllProject>
       }
     ]
   }

@@ -68,7 +68,8 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar animated-gradient bg-[#F3F7FF] shadow-sm px-6 md:px-13 lg:px-31">
+    <div className='animated-gradient bg-[#F3F7FF] shadow-sm '>
+      <div className="navbar max-w-7xl mx-auto px-16">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -107,6 +108,7 @@ const Navbar = () => {
         </a>
         {/* <ThemeToggle></ThemeToggle> */}
       </div>
+    </div>
     </div>
   );
 };

@@ -60,8 +60,8 @@ const Home = () => {
         </div>
         {/* Buttons */}
         <div className="mt-6 flex flex-wrap justify-center md:justify-start gap-4">
-         <a href="/Omar_Faruk_Resume.pdf" download="Omar_Faruk_Resume.pdf" className="inline-flex items-center gap-2 text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-6 py-3 rounded-lg shadow-md transition duration-300">
-           <FaDownload /> Download Resume
+         <a href="/Omar Faruk Cv.pdf" download="Omar_Faruk_Resume.pdf" className="inline-flex items-center gap-2 text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-6 py-3 rounded-lg shadow-md transition duration-300">
+           <FaDownload /> Download CV
          </a>
         </div>
       </div>

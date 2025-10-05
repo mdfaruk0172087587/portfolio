@@ -3,9 +3,12 @@ import { MdEmail, MdPhone, MdWhatsapp, MdLocationOn } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AddProject from "./AddProject";
 const Contact = () => {
     const form = useRef();
-    const [loading, setLoading] = useState(false);
+const showETD = localStorage.getItem("showETD") === "true";  
+
+ const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
         user_name: "",
         user_email: "",
@@ -168,6 +171,11 @@ const Contact = () => {
             </div>
              <div className=" max-w-[90%] mx-auto border-t text-black py-4 text-sm text-center">
                     © {new Date().getFullYear()} Omar Faruk. All rights reserved.
+                </div>
+                <div>
+                  {
+                    showETD ? <AddProject></AddProject> : ''
+                  }
                 </div>
         </div>
     );

@@ -2,35 +2,60 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 const skillsData = [
-    {
-        name: "React",
-        img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
-    },
-    {
-        name: "JavaScript",
-        img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg"
-    },
-    {
-        name: "Node.js",
-        img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
-    },
-    {
-        name: "MongoDB",
-        img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
-    },
-    {
-        name: "Express.js",
-        img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original-wordmark.svg"
-    },
-    {
-        name: "Tailwind CSS",
-        img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/tailwindcss/tailwindcss-plain.svg"
-    }
+  {
+    name: "React",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg",
+  },
+  {
+    name: "JavaScript",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "Node.js",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg",
+  },
+  {
+    name: "MongoDB",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+  },
+  {
+    name: "Express.js",
+    img: "https://upload.wikimedia.org/wikipedia/commons/6/64/Expressjs.png",
+  },
+  {
+    name: "Tailwind CSS",
+    img: "https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg",
+  },
+  {
+    name: "Next.js",
+    img: "https://raw.githubusercontent.com/devicons/devicon/master/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "NextAuth.js",
+    img: "https://next-auth.js.org/img/logo/logo-sm.png",
+  },
+  {
+    name: "Firebase",
+    img: "https://www.vectorlogo.zone/logos/firebase/firebase-icon.svg",
+  },
+  {
+    name: "JWT",
+    img: "https://jwt.io/img/pic_logo.svg",
+  },
+  {
+    name: "Git & GitHub",
+    img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"
+  },
+  {
+    name: "Context API",
+    img: "https://cdn-icons-png.flaticon.com/512/906/906324.png"
+  }
 ];
+
 const Skills = () => {
     return (
         <div className="py-5">
-            <h1 className="text-2xl font-medium text-center text-black mb-4">My Skills</h1>
+            <h1 className="text-4xl lg:text-5xl font-medium text-center text-black mb-4">My Skills</h1>
              <p className="text-center mb-8 text-black max-w-xl mx-auto">
                 Here are the technologies and tools I work with to create amazing digital experiences. atar bangla ki
             </p>
