@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MdEmail, MdPhone, MdWhatsapp, MdLocationOn } from "react-icons/md";
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
@@ -6,7 +6,14 @@ import "react-toastify/dist/ReactToastify.css";
 import AddProject from "./AddProject";
 const Contact = () => {
     const form = useRef();
-const showETD = localStorage.getItem("showETD") === "true";  
+     const [showAddProject, setShowAddProject] = useState(false);
+
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('showAddProject') === 'true') {
+      setShowAddProject(true);
+    }
+  }, []);
 
  const [loading, setLoading] = useState(false);
     const [formData, setFormData] = useState({
@@ -174,7 +181,7 @@ const showETD = localStorage.getItem("showETD") === "true";
                 </div>
                 <div>
                   {
-                    showETD ? <AddProject></AddProject> : ''
+                    showAddProject && <AddProject></AddProject>
                   }
                 </div>
         </div>
