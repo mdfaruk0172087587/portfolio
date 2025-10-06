@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import { MdEmail, MdPhone, MdWhatsapp, MdLocationOn } from "react-icons/md";
+import contactLot from "../assets/contactLottee.json"
 import emailjs from "@emailjs/browser";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import AddProject from "./AddProject";
+import Lottie from "lottie-react";
+import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt, FaWhatsapp } from "react-icons/fa";
 const Contact = () => {
     const form = useRef();
      const [showAddProject, setShowAddProject] = useState(false);
@@ -64,10 +67,10 @@ const Contact = () => {
             );
     };
     return (
-        <div className="mt-10">
-            <h1 className="text-2xl font-medium text-center text-black mb-4">Contact Me</h1>
-            <p className="text-center mb-8 text-black max-w-xl mx-auto">
-                Have a project in mind or just want to say hello? I'd love to hear from you. Let's create something amazing together!
+        <div className="mt-12">
+            <h1 className="text-4xl lg:text-5xl font-medium text-center text-black mb-4">Get In Touch</h1>
+            <p className="text-center mb-8 text-black px-4 max-w-xl mx-auto ">
+                Have questions or want to work together? Fill out the form below and I’ll get back to you as soon as possible.
             </p>
             <div className="max-w-[90%] mx-auto mt-5 grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Left Side: Form */}
@@ -82,7 +85,7 @@ const Contact = () => {
                                 name="user_name"
                                 value={formData.user_name}
                                 onChange={handleChange}
-                                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                                 required
                             />
                         </div>
@@ -94,7 +97,7 @@ const Contact = () => {
                                 name="user_email"
                                 value={formData.user_email}
                                 onChange={handleChange}
-                                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                                 required
                             />
                         </div>
@@ -105,7 +108,7 @@ const Contact = () => {
                                 rows="6"
                                 value={formData.message}
                                 onChange={handleChange}
-                                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                className="w-full p-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 text-gray-700"
                                 required
                             ></textarea>
                         </div>
@@ -145,37 +148,76 @@ const Contact = () => {
                         </button>
                     </form>
                 </div>
-                {/* Right Side: Contact Info */}
-                <div className="flex flex-col justify-center">
-                    <h1 className="text-3xl font-medium mb-6 text-gray-800">Contact Information</h1>
-                    <div className="flex items-center mb-6">
-                        <MdEmail className="text-2xl text-blue-600 mr-4" />
-                        <span className="lg:text-lg text-base text-gray-700">mdfaruk01720875872@gmail.com</span>
-                    </div>
-                    <div className="flex items-center mb-6">
-                        <MdPhone className="text-2xl text-green-600 mr-4" />
-                        <span className="text-lg text-gray-700">+880 1720 875872</span>
-                    </div>
-                    <div className="flex items-center mb-6">
-                        <MdWhatsapp className="text-2xl text-green-500 mr-4" />
-                        <a
-                            href="https://wa.me/8801720875872"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-lg text-gray-700 hover:text-green-700 transition underline"
-                        >
-                            +880 1720 875872
-                        </a>
-                    </div>
-                    <div className="flex items-center">
-                        <MdLocationOn className="text-2xl text-red-600 mr-4" />
-                        <span className="text-lg text-gray-700">Dhaka, Bangladesh</span>
-                    </div>
-                </div>
+                 {/* Lottie Animation */}
+        <div className="flex-1 w-full flex justify-center items-center">
+          <Lottie animationData={contactLot} loop={true} style={{ width: '100%', height: '100%' }} />
+        </div>
 
                 {/* Toast Notifications */}
                 <ToastContainer />
             </div>
+             {/* Contact Cards */}
+             <h1 className="text-center text-4xl lg:text-5xl font-medium my-10 text-gray-700">Contact Information</h1>
+        <div className="max-w-6xl mx-auto grid gap-6 grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 mb-20">
+          {/* Email */}
+          <div
+            className=" backdrop-blur-md border bg-gray-300 border-white/20 shadow-lg 
+                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
+                        transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="bg-green-100 p-4 rounded-full shadow-inner">
+              <FaEnvelope className="text-green-600 text-2xl" />
+            </div>
+            <span className="font-semibold text-base md:text-lg text-gray-500">
+              mdfaruk01720875872@gmail.com
+            </span>
+          </div>
+
+          {/* Phone */}
+          <div
+            className="backdrop-blur-md border bg-gray-300 border-white/20 shadow-lg 
+                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
+                        transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="bg-green-100 p-4 rounded-full shadow-inner">
+              <FaPhoneAlt className="text-green-600 text-2xl" />
+            </div>
+            <span className="font-semibold text-base md:text-lg text-gray-500">
+              +8801720875872
+            </span>
+          </div>
+
+          {/* WhatsApp */}
+          <a
+            href="https://wa.me/8801823461697"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="backdrop-blur-md border bg-gray-300 border-white/20 shadow-lg 
+                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
+                        transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="bg-green-100 p-4 rounded-full shadow-inner">
+              <FaWhatsapp className="text-green-600 text-2xl" />
+            </div>
+            <span className="font-semibold text-base md:text-lg text-gray-500">
+              +8801720875872
+            </span>
+          </a>
+
+          {/* Location */}
+          <div
+            className="backdrop-blur-md border bg-gray-300 border-white/20 shadow-lg 
+                        rounded-2xl p-6 flex items-center gap-4 hover:shadow-green-400/40 
+                        transition-all duration-300 hover:-translate-y-1"
+          >
+            <div className="bg-green-100 p-4 rounded-full shadow-inner">
+              <FaMapMarkerAlt className="text-green-600 text-2xl" />
+            </div>
+            <span className="font-semibold text-base md:text-lg text-gray-500">
+              Dhaka, Bangladesh
+            </span>
+          </div>
+        </div>
              <div className=" max-w-[90%] mx-auto border-t text-black py-4 text-sm text-center">
                     © {new Date().getFullYear()} Omar Faruk. All rights reserved.
                 </div>

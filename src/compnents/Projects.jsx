@@ -6,11 +6,8 @@ import courseProject from '../assets/course-management.PNG'
 import { Link } from 'react-router';
 const Projects = () => {
     return (
-        <div className="py-5 ">
-            <h1 className="text-4xl lg:text-5xl font-medium text-center  text-black mb-4">My Projects</h1>
-            <p className="text-center mb-8 text-black max-w-xl mx-auto">
-                Here are some of my recent projects that showcase my skills and passion for creating innovative solutions.
-            </p>
+        <div className="py-5 mt-16 ">
+            <h1 className="text-4xl lg:text-5xl font-bold bg-gradient-to-r from-indigo-700 via-purple-500 to-pink-400 bg-clip-text text-transparent drop-shadow-lg text-center mb-10">My Projects</h1>
             <div className="max-w-[90%] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 ">
                {/* 1 project */}
                 <div className="flex group flex-col overflow-hidden shadow-md rounded-2xl border border-gray-200 bg-white transition-all duration-500 hover:shadow-xl hover:-translate-y-3 space-y-3 ">
@@ -37,8 +34,8 @@ const Projects = () => {
                     </div>
                 </div>
             </div>
-            <div className='mt-6 flex justify-center'>
-                <Link to='/projectDetails/allProject' className='mt-auto text-center text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-4 py-2 rounded-lg shadow-md transition duration-300 text-xl flex items-center gap-3'>More Project <span><FaArrowRightFromBracket /></span></Link>
+            <div className='mt-10 flex justify-center'>
+                <Link to='/projectDetails/allProject' className='mt-auto text-center text-black hover:bg-blue-700 border border-blue-600 shadow-blue-300 px-4 py-2 rounded-lg shadow-md transition duration-300 text-2xl flex items-center gap-3'>More Project <span><FaArrowRightFromBracket /></span></Link>
             </div>
         </div>
     );

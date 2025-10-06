@@ -3,6 +3,7 @@ import { Outlet } from 'react-router';
 import { FaArrowLeft } from 'react-icons/fa';
 import '../navbar.css'
 import { HashLink } from 'react-router-hash-link';
+import ThemeToggle from '../compnents/ThemeToggle';
 const ProjectDetailsLayOut = () => {
     return (
         <div>
@@ -12,6 +13,7 @@ const ProjectDetailsLayOut = () => {
                         <FaArrowLeft className="text-lg" /> Back to Projects
                     </HashLink>
                 </nav>
+               
             </header>
             <main className=''>
                 <Outlet></Outlet>

@@ -17,6 +17,7 @@ const AddProject = () => {
             const res = await axios.post('https://portfolio-server-kappa-roan.vercel.app/projects', post);
             if(res.data.insertedId){
               alert('post success')
+              e.target.reset();
             }
             
         }
